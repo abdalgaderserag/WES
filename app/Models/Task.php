@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'creator_id', 'user_id', 'deadline', 'description', 'attachments', 'status'
+    ];
+
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
@@ -13,7 +14,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $tasks = $user->tasks()->get();
+        return response($tasks);
     }
 
     /**
@@ -21,7 +24,14 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        //
+        $task = new Task();
+        $task->creator_id = Auth::id();
+        $task->user_id = $request->user_id;
+        $task->deadline = $request->deadline;
+        $task->desciption = $request->description;
+        $task->attachments = $request->attachments;
+        $task->save();
+        return response($task);
     }
 
     /**
@@ -29,7 +39,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        //
+        return response($task);
     }
 
     /**
@@ -37,7 +47,12 @@ class TaskController extends Controller
      */
     public function update(UpdateTaskRequest $request, Task $task)
     {
-        //
+        $task->user_id = $request->user_id;
+        $task->deadline = $request->deadline;
+        $task->desciption = $request->description;
+        $task->attachments = $request->attachments;
+        $task->update();
+        return response($task);
     }
 
     /**
@@ -45,6 +60,8 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        $task->status = 'deleted';
+        $task->update();
+        return response($task);
     }
 }
