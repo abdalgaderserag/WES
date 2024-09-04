@@ -13,7 +13,8 @@ class MediaController extends Controller
      */
     public function index()
     {
-        //
+        $media = Media::all();
+        return response($media);
     }
 
     /**
@@ -21,7 +22,13 @@ class MediaController extends Controller
      */
     public function store(StoreMediaRequest $request)
     {
-        //
+        $media = new Media();
+        $media->text = $request->text;
+        $media->images = $request->images;
+        $media->videos= $request->videos;
+        $media->others = $request->others;
+        $media->save();
+        return response($media);
     }
 
     /**
@@ -29,7 +36,7 @@ class MediaController extends Controller
      */
     public function show(Media $media)
     {
-        //
+        return response($media);
     }
 
     /**
@@ -37,7 +44,12 @@ class MediaController extends Controller
      */
     public function update(UpdateMediaRequest $request, Media $media)
     {
-        //
+        $media->text = $request->text;
+        $media->images = $request->images;
+        $media->videos= $request->videos;
+        $media->others = $request->others;
+        $media->update();
+        return response($media);
     }
 
     /**
@@ -45,6 +57,15 @@ class MediaController extends Controller
      */
     public function destroy(Media $media)
     {
-        //
+        $media->delete();
+        return response($media);
+    }
+
+    /**
+     * TODO : add upload the files code
+     */
+    public function upload()
+    {
+
     }
 }
