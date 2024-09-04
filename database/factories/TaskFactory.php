@@ -17,7 +17,10 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'deadline' => now()->addHours(random_int(1,8)),
+            'description' => $this->faker->paragraph,
+            'attachments' => '',
+            'status' => 'ongoing'
         ];
     }
 }

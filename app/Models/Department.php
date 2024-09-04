@@ -15,6 +15,6 @@ class Department extends Model
 
     public function leader()
     {
-        return $this->hasOne(User::class);
+        return $this->hasOne(User::class,'id','leader_id');
     }
 }
