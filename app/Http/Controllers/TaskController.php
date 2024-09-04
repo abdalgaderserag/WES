@@ -39,7 +39,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return response($task);
+        return response($task,$task->submit);
     }
 
     /**
@@ -51,6 +51,13 @@ class TaskController extends Controller
         $task->deadline = $request->deadline;
         $task->desciption = $request->description;
         $task->attachments = $request->attachments;
+        $task->update();
+        return response($task);
+    }
+
+    public function approve(Task $task)
+    {
+        $task->status = 'completed';
         $task->update();
         return response($task);
     }

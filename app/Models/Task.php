@@ -9,7 +9,7 @@ class Task extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'creator_id', 'user_id', 'deadline', 'description', 'attachments', 'status'
+        'creator_id', 'user_id', 'submit_id', 'deadline', 'description', 'attachments', 'status'
     ];
 
     public function creator()
@@ -19,6 +19,11 @@ class Task extends Model
 
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
+    }
+
+    public function submit()
+    {
+        return $this->hasOne(Media::class,'id','submit');
     }
 }

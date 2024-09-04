@@ -11,15 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::create('media', function (Blueprint $table) {
             $table->id();
-            $table->integer('creator_id',0,1);
-            $table->integer('user_id',0,1);
-            $table->integer('submit_id',0,1);
-            $table->date('deadline');
-            $table->text('description');
-            $table->text('attachments');
-            $table->string('status');
             $table->timestamps();
         });
     }
@@ -29,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tasks');
+        Schema::dropIfExists('media');
     }
 };
