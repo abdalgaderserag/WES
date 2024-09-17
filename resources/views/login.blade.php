@@ -6,11 +6,23 @@
     <link rel="stylesheet" href="{{ url('css/login.css') }}">
 </head>
 <body>
-    <div id="login">
-        <input type="text" name="username" id="username">
-        <input type="password" name="password" id="password">
-        <button>login</button>
+    <div id="main">
+        <div id="login">
+            <div>
+                <label for="username">Enter username:</label><br>
+                <input type="text" name="username" id="username">
+            </div>
+            <div>
+                <label for="password">Enter password:</label><br>
+                <input type="password" name="password" id="password">
+            </div>
+            <button>login</button>
+        </div>
     </div>
 @include('layouts.footer')
 </body>
+<script>
+    let hei = window.innerHeight - 182;
+    document.getElementById('main').style.height = hei + 'px'
+</script>
 </html>
