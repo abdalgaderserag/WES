@@ -1,0 +1,163 @@
+
+body{
+    margin: 0;
+    color: #1a202c;
+    background-color: rgba(219, 225, 231, 0.74);
+    font-family: Pridi;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: #8a8c90 1px 1px 10px;
+    color: #4a5568;
+    border-bottom: 4px solid #32C8A7;
+    font-size: 1.2rem;
+    font-family: lato;
+    font-weight: 600;
+    margin: 0 0 32px 0;
+}
+
+#header div{
+    margin: 12px 1.2%;
+}
+
+#logo{
+    width: 30%;
+    font-size: 1.9rem;
+    font-weight: 600;
+    font-family: "Germania One";
+    cursor: pointer;
+}
+
+#info{
+    width: 60%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    /*font-family: "Germania One";*/
+}
+
+#info div{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.section {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: #A9A9A9FF;
+    font-size: 1.05rem;
+    margin: 20px 3%;
+}
+.center-text{
+    justify-content: center;
+}
+.item-row:first-child{
+    user-select: none;
+    color: #fff;
+    background-color: #32c8a7;
+    border-radius: 4px 0;
+    font-family: Lato;
+    border-bottom: 0 solid #fff;
+}
+
+.item-row {
+    padding: 6px 14px;
+    color: #A9A9A9FF;
+    border-bottom: 1px solid #A9A9A9FF;
+    align-items: center;
+}
+
+.item{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.item-row .item:first-child{
+    width: 110%;
+}
+
+.item img{
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+a{
+    color: #A9A9A9FF;
+}
+.item-row:last-child{
+    border-bottom: 0 solid #A9A9A9FF;
+}
+
+
+.order-card{
+    border-radius: 16px;
+    background-color: #ffffff;
+    padding: 12px 1.5%;
+    align-items: flex-start;
+    box-shadow: #A9A9A9FF -1px 1px 3px -1px;
+    margin-bottom: 12px;
+}
+
+.card-info{
+    font-size: 1.23rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.card-info img{
+    border-radius: 16px;
+    height: 124px;
+    border: 2px solid  #4a5568;
+}
+
+.card-body{
+    color:  #4a5568;
+    font-size: 1.15rem;
+    width: 100%;
+    margin-left: 18px;
+}
+
+.status{
+    color: #fff;
+    font-family: Lato;
+    background-color: #4186ee;
+    padding: 3px 12px 6px 12px;
+    border-radius: 36px;
+}
+.status-r{
+    background-color: #32C8A7;
+}
+.status-f{
+    background-color: #eada2d;
+}
+.status-d{
+    background-color: #d9192e;
+}
+
+
+
+
+
+
+
+
+
+
+#footer{
+    border-top: 34px solid #32C8A7;
+    margin-top: 32px;
+    height: 246px;
+    background-color: #4a5568;
+}
