@@ -9,3 +9,7 @@ Route::get('/login', function () {
 Route::get('/', function (){
     return view('dashboard');
 });
+
+Route::get('/task', function (){
+    return view('user.task');
+});
