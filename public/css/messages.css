@@ -1,0 +1,78 @@
+#main{
+    align-items: normal;
+}
+
+#message-view{
+    width: 76%;
+}
+
+.message-block{
+    width: 100%;
+    font-family: Lato;
+    font-size: 0.95rem;
+    margin: 12px 0;
+}
+
+.sender{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message-block .message:first-child{
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.message-block .message:last-child{
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.message{
+    width: fit-content;
+    padding: 4px 8px;
+    color: #1a202c;
+    margin-bottom: 1px;
+}
+
+.message-sender{
+    background-color: #32c8a7;
+    color: #fff;
+}
+
+#input-text{
+    width: 97%;
+    padding: 4px;
+    border: unset;
+    box-shadow: #8a8c90 0 0 2px;
+    font-size: 1.1rem;
+}
+
+
+#input-actions{
+    margin-left: 3%;
+}
+#input-actions .button{
+    padding: 4px 12px;
+}
+
+
+
+#contact-view{
+    width: 24%;
+    height: fit-content;
+}
+#contact-view .item-row:first-child{
+    cursor: default;
+}
+#contact-view .item-row {
+    cursor: pointer;
+}
+
+#contact-view .item-row:hover{
+    background-color: rgba(138, 140, 144, 0.11);
+}
+
+#contact-view .item-row:hover:first-child{
+    background-color: #32c8a7;
+}

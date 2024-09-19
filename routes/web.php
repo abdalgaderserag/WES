@@ -13,3 +13,7 @@ Route::get('/', function (){
 Route::get('/task', function (){
     return view('user.task');
 });
+
+Route::get('/messages', function (){
+    return view('messages');
+});

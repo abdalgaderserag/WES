@@ -1,11 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
+@extends('layouts.main')
+
+@section('style')
     <link rel="stylesheet" href="{{ url('css/login.css') }}">
-</head>
-<body>
+@endsection
+@section('main')
     <div id="main">
         <div id="login">
             <div>
@@ -19,10 +17,9 @@
             <button>login</button>
         </div>
     </div>
-@include('layouts.footer')
-</body>
-<script>
-    let hei = window.innerHeight - 182;
-    document.getElementById('main').style.height = hei + 'px'
-</script>
-</html>
+    <script>
+        let hei = window.innerHeight - 182;
+        document.getElementById('main').style.height = hei + 'px'
+    </script>
+
+@endsection

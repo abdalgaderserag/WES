@@ -66,7 +66,8 @@ body{
     user-select: none;
     color: #fff;
     background-color: #32c8a7;
-    border-radius: 4px 0;
+    /*border-radius: 4px 0;*/
+    border-radius: 4px 4px 0 0;
     font-family: Lato;
     border-bottom: 0 solid #fff;
 }
@@ -149,6 +150,28 @@ a{
 
 
 
+.button{
+    border: unset;
+    background-color: #32C8A7;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 4px 1.4%;
+    border-radius: 6px;
+}
+
+.button:hover{
+    box-shadow: #8a8c90 1px 1px 2px;
+}
+
+.button-2 {
+    background-color: unset;
+    color: #1a202c;
+}
+
+.button-2:hover{
+    box-shadow: unset;
+}
 
 
 
@@ -157,7 +180,7 @@ a{
 
 #footer{
     border-top: 34px solid #32C8A7;
-    margin-top: 152px;
+    margin-top: 82px;
     height: 246px;
     background-color: #4a5568;
 }
