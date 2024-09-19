@@ -35,8 +35,8 @@
             </div>
 
             <div class="item center-text">
-                <img src="{{ url('/svg/view.svg') }}">
-                <img src="{{ url('/svg/chat.svg') }}">
+                <img src="{{ url('/svg/view.svg') }}" onclick="window.location.href='/task'">
+                <img src="{{ url('/svg/chat.svg') }}" onclick="window.location.href='/messages'">
             </div>
         </div>
 
@@ -54,8 +54,8 @@
             </div>
 
             <div class="item center-text">
-                <img src="{{ url('/svg/view.svg') }}">
-                <img src="{{ url('/svg/chat.svg') }}">
+                <img src="{{ url('/svg/view.svg') }}" onclick="window.location.href='/task'">
+                <img src="{{ url('/svg/chat.svg') }}" onclick="window.location.href='/messages'">
             </div>
         </div>
 
@@ -73,8 +73,8 @@
             </div>
 
             <div class="item center-text">
-                <img src="{{ url('/svg/view.svg') }}">
-                <img src="{{ url('/svg/chat.svg') }}">
+                <img src="{{ url('/svg/view.svg') }}" onclick="window.location.href='/task'">
+                <img src="{{ url('/svg/chat.svg') }}" onclick="window.location.href='/messages'">
             </div>
         </div>
 
@@ -92,8 +92,8 @@
             </div>
 
             <div class="item center-text">
-                <img src="{{ url('/svg/view.svg') }}">
-                <img src="{{ url('/svg/chat.svg') }}">
+                <img src="{{ url('/svg/view.svg') }}" onclick="window.location.href='/task'">
+                <img src="{{ url('/svg/chat.svg') }}" onclick="window.location.href='/messages'">
             </div>
         </div>
 
@@ -111,8 +111,8 @@
             </div>
 
             <div class="item center-text">
-                <img src="{{ url('/svg/view.svg') }}">
-                <img src="{{ url('/svg/chat.svg') }}">
+                <img src="{{ url('/svg/view.svg') }}" onclick="window.location.href='/task'">
+                <img src="{{ url('/svg/chat.svg') }}" onclick="window.location.href='/messages'">
             </div>
         </div>
 
@@ -130,8 +130,8 @@
             </div>
 
             <div class="item center-text">
-                <img src="{{ url('/svg/view.svg') }}">
-                <img src="{{ url('/svg/chat.svg') }}">
+                <img src="{{ url('/svg/view.svg') }}" onclick="window.location.href='/task'">
+                <img src="{{ url('/svg/chat.svg') }}" onclick="window.location.href='/messages'">
             </div>
         </div>
 

@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         User::factory(10)->make()->each(function ($u){
-             Department::factory(3)->create([
-                 'leader_id' => $u->id
-             ]);
-         });
+//         User::factory(10)->make()->each(function ($u){
+//             Department::factory(3)->create([
+//                 'leader_id' => $u->id
+//             ]);
+//         });
 
         User::factory()->create([
             'name' => 'Test User',

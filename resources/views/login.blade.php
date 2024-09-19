@@ -14,7 +14,7 @@
                 <label for="password">Enter password:</label><br>
                 <input type="password" name="password" id="password">
             </div>
-            <button>login</button>
+            <button onclick="window.location.href = '/'">login</button>
         </div>
     </div>
     <script>
