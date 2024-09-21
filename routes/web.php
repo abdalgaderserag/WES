@@ -9,6 +9,9 @@ Route::get('/login', function () {
 
 Route::get('/', function (){
     \Illuminate\Support\Facades\Auth::loginUsingId(1);
+    $num = random_int(1,2);
+    if ($num == 2)
+        return view('mangment.dashboard');
     return view('dashboard');
 });
 
