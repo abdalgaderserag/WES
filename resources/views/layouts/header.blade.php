@@ -5,7 +5,7 @@
     <div id="info">
         <div id="profile" style="padding-bottom: 5px" onclick="window.location.href='logout'">Mohamed Khalid</div>
         <div id="notifications">
-            <img src="{{ url('/svg/notification.svg') }}">
+            <img src="{{ url('/svg/notification.svg') }}" onclick="window.location.href='notifications'">
         </div>
         <div id="messages">
             <img src="{{ url('/svg/message.svg') }}" onclick="window.location.href='messages'">

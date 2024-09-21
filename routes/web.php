@@ -15,6 +15,10 @@ Route::get('/', function (){
     return view('dashboard');
 });
 
+Route::get('notifications', function (){
+    return view('user.notification');
+});
+
 Route::get('/task', function (){
     return view('user.task');
 });
