@@ -3,7 +3,7 @@ body{
     margin: 0;
     color: #1a202c;
     background-color: rgba(219, 225, 231, 0.74);
-    font-family: Pridi;
+    font-family: Lato;
 }
 
 #header{
@@ -148,6 +148,18 @@ a{
 }
 
 
+.input-area{
+    min-width: 100%;
+    min-height: 120px;
+}
+
+.input-text{
+    width: 100%;
+    padding: 4px;
+    border: unset;
+    box-shadow: #8a8c90 0 0 2px;
+    font-size: 1.1rem;
+}
 
 
 .button{
@@ -174,6 +186,54 @@ a{
 }
 
 
+.input-text{
+    width: 97%;
+    padding: 4px;
+    border: unset;
+    box-shadow: #8a8c90 0 0 2px;
+    font-size: 1.1rem;
+}
+
+.input-area{
+    min-width: 96%;
+    max-width: 96%;
+}
+
+.info-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.info-img{
+    height: 48px;
+    width: 48px;
+    border: 3px solid #4186ee;
+    border-radius: 50%;
+}
+
+.info-img-disconnected{
+    border-color: #8a8c90;
+}
+
+.info-img-away{
+    border-color: #eada2d;
+}
+
+.info-text{
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-name{
+    font-size: 1.1rem;
+    color: #1a202c;
+}
+
+.info-job{
+    font-size: 0.8rem;
+}
 
 
 

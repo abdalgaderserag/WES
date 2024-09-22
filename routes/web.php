@@ -30,3 +30,7 @@ Route::get('/messages', function (){
 Route::get('logout',function (){
     \Illuminate\Support\Facades\Auth::logout();
 });
+
+Route::get('/task/create', function (){
+    return view('mangment.task.create');
+});

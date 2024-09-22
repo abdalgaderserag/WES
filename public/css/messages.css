@@ -15,8 +15,7 @@
 
 .sender{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .message-block .message:first-child{
@@ -40,13 +39,7 @@
     color: #fff;
 }
 
-#input-text{
-    width: 97%;
-    padding: 4px;
-    border: unset;
-    box-shadow: #8a8c90 0 0 2px;
-    font-size: 1.1rem;
-}
+
 
 
 #input-actions{
@@ -54,6 +47,20 @@
 }
 #input-actions .button{
     padding: 4px 12px;
+}
+
+.input-message{
+    padding: 8px 1%;
+}
+
+.input-message input{
+    width: 100%;
+    border: unset;
+    font-size: 1.1rem;
+}
+
+.input-message input:focus {
+    outline: none;
 }
 
 
