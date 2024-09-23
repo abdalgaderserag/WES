@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('style')
     <link rel="stylesheet" href="{{ url('css/messages.css') }}">
@@ -15,7 +15,9 @@
                 <div style="padding: 24px 10px;background-color: #e4e8ed">
                     <div class="message-block">
                         <div class="message message-sender">dssdfd fssfsd fsdfs sdf sdf sdf</div>
-                        <div class="message message-sender">sdgsdgsdgs sfsdf sdfsfsf sd  sdfsdfdsfdsf dfsfsfs sdfsfs dsfsd sdfs fe erg er</div>
+                        <div class="message message-sender">sdgsdgsdgs sfsdf sdfsfsf sd sdfsdfdsfdsf dfsfsfs sdfsfs
+                            dsfsd sdfs fe erg er
+                        </div>
                         <div class="message message-sender">sadasd efwfd fd.</div>
                     </div>
 

@@ -39,7 +39,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return response($task,$task->submit);
+        return view('user.task')->with(['task'=>$task]);
     }
 
     /**

@@ -19,7 +19,7 @@ class LoginController extends Controller
         if (Hash::check($request->password, $user->password)){
             $token = $user->createToken($user->username . '-login');
             Auth::loginUsingId($user->id);
-            return response($user, $token->plainTextToken);
+            return response([$user,$token->plainTextToken]);
         }else{
             return response('wrong password');
         }

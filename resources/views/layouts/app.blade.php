@@ -7,7 +7,7 @@
     @yield('style')
 </head>
 <body>
-@include('layouts.header')
+<livewire:layouts.header />
 @yield('main')
 @include('layouts.footer')
 </body>

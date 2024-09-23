@@ -16,7 +16,8 @@ class TaskController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $tasks = $user->tasks->get();
+        $tasks = $user->tasks->with('creator')->get();
+//        $tasks = Task::with('creator')->get();
         return response($tasks);
     }
 

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('style')
     <link rel="stylesheet" href="{{ url('css/mangment.css') }}">
@@ -59,7 +59,6 @@
                 <span>completed tasks this month:</span> 120 <br>
             </div>
         </div>
-
 
 
     </div>
@@ -199,8 +198,6 @@
                 <img src="{{ url('/svg/chat.svg') }}" onclick="window.location.href='/messages'">
             </div>
         </div>
-
-
 
 
     </div>

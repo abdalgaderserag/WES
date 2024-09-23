@@ -4,9 +4,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
+Route::get('usertest',function (){
+    $user = \Illuminate\Support\Facades\Auth::user();
+    return response($user);
+})->middleware('auth:sanctum');
+
 //guests routes for unauthanticated user
-Route::middleware('guest')->namespace('App\Http\Controllers')->group(function (){
-    Route::post('login','Auth\LoginController@login')->name('login');
+Route::middleware('guest:sanctum')->namespace('App\Http\Controllers')->group(function (){
+    Route::post('login','Auth\LoginController@login');
+});
+
+Route::post('test', function (Request $request){
+    return $request;
 });
 
 
@@ -26,4 +35,4 @@ Route::middleware('auth:sanctum')->namespace('App\Http\Controllers')->group(func
     Route::delete('user/{user}','Auth\RegisterController@delete')->name('delete_user');
 });
 
-Route::get('task/all', 'App\Http\Controllers\DepartmentController@index');
+Route::get('task/all', 'App\Http\Controllers\User\TaskController@index');

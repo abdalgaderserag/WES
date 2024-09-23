@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('style')
     <link rel="stylesheet" href="{{ url('css/messages.css') }}">
@@ -14,7 +14,8 @@
                     Add new task
                 </div>
                 <div class="item-row" style="padding: 24px 10px">
-                    <input class="input-text" type="search" name="select-employ" id="employ-select" placeholder="search employ">
+                    <input class="input-text" type="search" name="select-employ" id="employ-select"
+                           placeholder="search employ">
                     <br>
                     <br>
                     <textarea class="input-area input-text" placeholder="task description"></textarea><br>

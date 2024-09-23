@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         Task::factory(10)->create([
-            'user_id' => 10,
+            'user_id' => 11,
         ]);
 
         Department::factory()->create([

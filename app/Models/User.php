@@ -52,4 +52,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Task::class);
     }
+
+//    public function isDepartHead()
+//    {
+//        $dep = Department::find($this->);
+//    }
 }

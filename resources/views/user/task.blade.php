@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('style')
     <link rel="stylesheet" href="{{ url('css/task.css') }}">
@@ -16,7 +16,10 @@
             Description :
         </div>
         <div class="content">
-            asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh
+            asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh
+            asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh
+            asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh
+            asdakj jkahs lj laskd lasj dal kajlh jhak laks hkal kahs lak hlaskh laskh lkash alk hakslhd lakshdl klhalsh
         </div>
     </div>
 
