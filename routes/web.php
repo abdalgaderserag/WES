@@ -14,10 +14,9 @@ Route::middleware('auth')->group(function (){
     Route::get('notifications', 'NavigateController@notification')->name('notification');
 
     Route::get('/messages', 'NavigateController@messages')->name('messages');
+    Route::get('/messages/{username}', 'NavigateController@message')->name('message');
 
 
     Route::get('/task/{task}', 'TaskController@show')->name('task.show');
-//    Route::get('/task/{task}', 'TaskController@show');
-
 });
 });

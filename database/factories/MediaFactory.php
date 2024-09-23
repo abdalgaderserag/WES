@@ -17,7 +17,8 @@ class MediaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'text' => $this->faker->paragraph,
+            'created_at' => now()->addMinutes(rand(0,5)),
         ];
     }
 }

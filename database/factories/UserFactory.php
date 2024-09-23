@@ -26,7 +26,7 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'username' => $this->faker->slug,
-            'department_id' => 0,
+            'department_id' => 1,
             'role' => 'employ',
             'salary' => random_int(1000,5000),
             'password' => static::$password ??= Hash::make('password'),

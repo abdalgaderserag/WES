@@ -18,6 +18,7 @@ class TaskFactory extends Factory
     {
         return [
             'creator_id' => rand(0,1),
+            'title' => $this->faker->name,
             'deadline' => now()->addHours(random_int(1,8)),
             'description' => $this->faker->paragraph,
             'attachments' => '',

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Department;
+use App\Models\Media;
 use App\Models\Task;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,7 +16,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        User::factory(10)->create()->each(function ($u){
+            Media::factory(10)->create([
+                'sender_id' => $u->id,
+                'user_id' => 11
+            ]);
+        });
+
+        Media::factory(20)->create([
+            'sender_id' => rand(1,11),
+            'department_id' => 1
+        ]);
 
         Task::factory(10)->create([
             'user_id' => 11,
@@ -36,6 +47,11 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'username' => 'test_user',
+        ]);
+
+        Media::factory(5)->create([
+            'sender_id' => 11,
+            'department_id' => 1
         ]);
     }
 }

@@ -4,7 +4,7 @@ body{
     background-color: rgba(219, 225, 231, 0.74);
     font-family: Pridi;
     background-size: cover;
-    background-image: url("../images/back.jpg");
+    background-image: radial-gradient(#a19c9cb5, #5b636733), url("../images/back.jpg");
 }
 
 #main{

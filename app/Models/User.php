@@ -53,6 +53,10 @@ class User extends Authenticatable
         return $this->hasMany(Task::class);
     }
 
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
 //    public function isDepartHead()
 //    {
 //        $dep = Department::find($this->);

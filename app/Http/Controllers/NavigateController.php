@@ -29,6 +29,11 @@ class NavigateController extends Controller
 
     public function messages()
     {
-        return view('messages');
+        return view('messages')->with(['username' => '']);
+    }
+
+    public function message($username)
+    {
+        return view('messages')->with(['username' => $username]);
     }
 }

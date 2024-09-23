@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('media', function (Blueprint $table) {
             $table->id();
+            $table->integer('sender_id',0, 1);
+            $table->integer('user_id',0, 1)->nullable();
+            $table->integer('department_id',0, 1)->nullable();
+            $table->text('text')->nullable();
+            $table->text('attachments')->nullable();
             $table->timestamps();
         });
     }

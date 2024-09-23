@@ -7,7 +7,7 @@
 }
 
 .message-block{
-    width: 100%;
+    width: 52%;
     font-family: Lato;
     font-size: 0.95rem;
     margin: 12px 0;
@@ -16,6 +16,7 @@
 .sender{
     display: flex;
     justify-content: flex-end;
+    margin-left: 48%;
 }
 
 .message-block .message:first-child{
@@ -39,6 +40,10 @@
     color: #fff;
 }
 
+#message-container{
+    padding: 24px 10px;
+    background-color: #e4e8ed;
+}
 
 
 
@@ -51,6 +56,10 @@
 
 .input-message{
     padding: 8px 1%;
+}
+
+.input-message img{
+    cursor: pointer;
 }
 
 .input-message input{
@@ -66,11 +75,15 @@
 
 
 #contact-view{
-    /*border-left: 4px solid #32c8a7;*/
+    border-left: 5px solid #32c8a7;
     border-radius: 0;
-    padding: 0 1px;
     height: fit-content;
     margin: 0;
+    width: 15%;
+}
+
+.active{
+    border-right: 5px solid #32c8a7;
 }
 #contact-view .item-row {
     cursor: pointer;
@@ -80,6 +93,10 @@
 }
 #contact-view .item-row:hover{
     background-color: rgba(138, 140, 144, 0.11);
+}
+
+.item-row:first-child{
+    border-radius: unset;
 }
 
 #contact-view .item-row:hover:first-child{
