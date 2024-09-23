@@ -1,9 +1,12 @@
-@extends('layouts.main')
 
-@section('style')
+    <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
     <link rel="stylesheet" href="{{ url('css/login.css') }}">
-@endsection
-@section('main')
+</head>
+<body>
     <div id="main">
         <div id="login">
             <div>
@@ -17,9 +20,10 @@
             <button onclick="window.location.href = '/'">login</button>
         </div>
     </div>
+</body>
+</html>
     <script>
-        let hei = window.innerHeight - 182;
+        let hei = window.innerHeight;
         document.getElementById('main').style.height = hei + 'px'
     </script>
 
-@endsection

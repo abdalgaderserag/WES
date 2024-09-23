@@ -12,7 +12,7 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        //
+        return response(Department::with('leader')->get());
     }
 
     /**

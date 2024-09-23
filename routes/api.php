@@ -25,3 +25,5 @@ Route::middleware('auth:sanctum')->namespace('App\Http\Controllers')->group(func
     Route::get('user/{user}','Auth\RegisterController@show')->name('show_user');
     Route::delete('user/{user}','Auth\RegisterController@delete')->name('delete_user');
 });
+
+Route::get('task/all', 'App\Http\Controllers\DepartmentController@index');

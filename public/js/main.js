@@ -3,7 +3,7 @@ let profileIsVisi = true;
 function showProfileMenu(){
     if (profileIsVisi){
         let profileOriginalHeight = profile.offsetHeight + 4;
-        let profileOriginalWidth = profile.offsetWidth - 17 ;
+        let profileOriginalWidth = profile.offsetWidth - 18 ;
         profile.children[0].style.display = 'none';
         profile.children[1].style.display = 'flex';
         profile.children[2].children[0].style.transform = "rotate(90deg)";

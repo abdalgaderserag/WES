@@ -3,6 +3,8 @@ body{
     color: #1a202c;
     background-color: rgba(219, 225, 231, 0.74);
     font-family: Pridi;
+    background-size: cover;
+    background-image: url("../images/back.jpg");
 }
 
 #main{
@@ -14,7 +16,7 @@ body{
 }
 
 #login{
-    width: 72%;
+    width: 42%;
     background-color: #fff;
     border-radius: 4px;
     box-shadow: #A9A9A9FF -1px 1px 3px -1px;
@@ -33,7 +35,7 @@ input{
     border-radius: 12px;
     color: #A9A9A9;
     padding: 8px 12px;
-    width: 97.6%;
+    width: 95%;
 }
 #login div{
     margin: 12px 0;

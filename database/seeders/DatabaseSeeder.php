@@ -15,15 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->make()->each(function ($u){
-            $id = $u->id;
-            if ($id === 1){
-                $id = 10;
-            }
-            Task::factory(10)->make([
-                'user_id' => $id,
-            ]);
-        });
+        User::factory(10)->create();
+
+        Task::factory(10)->create([
+            'user_id' => 10,
+        ]);
 
         Department::factory()->create([
             'leader_id' => 1
