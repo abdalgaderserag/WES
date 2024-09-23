@@ -6,6 +6,16 @@ body{
     font-family: Lato;
 }
 
+#profile-menu{
+    display: none;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+
+
+
 #header{
     display: flex;
     justify-content: space-between;
@@ -13,15 +23,11 @@ body{
     background-color: #ffffff;
     box-shadow: #8a8c90 1px 1px 10px;
     color: #4a5568;
-    border-bottom: 4px solid #32C8A7;
+    border-bottom: 4px solid #32c8a7;
     font-size: 1.2rem;
     font-family: lato;
     font-weight: 600;
     margin: 0 0 32px 0;
-}
-
-#header div{
-    margin: 12px 1.2%;
 }
 
 #logo{
@@ -30,6 +36,13 @@ body{
     font-weight: 600;
     font-family: "Germania One";
     cursor: pointer;
+}
+#notifications{
+    margin: 0 10px;
+}
+
+#messages{
+    margin: 0 10px;
 }
 
 #info{
@@ -40,9 +53,22 @@ body{
     /*font-family: "Germania One";*/
 }
 
-#info div{
-    margin: 0 10px;
+#info img{
     cursor: pointer;
+}
+
+#info svg{
+    padding: 0 4px;
+}
+
+#profile{
+    border-left: 4px solid #32c8a7;
+    padding: 2px 2px 2px 12px;
+    margin: 4px 0;
+}
+
+#profile .info-text{
+    margin: 0 15px 0 0;
 }
 
 .flex{
@@ -55,7 +81,6 @@ body{
 .section {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: #A9A9A9FF;
     font-size: 1.05rem;
     margin: 20px 3%;
 }

@@ -11,4 +11,5 @@
 @yield('main')
 @include('layouts.footer')
 </body>
+<script src="{{ url('js/main.js') }}"></script>
 </html>
