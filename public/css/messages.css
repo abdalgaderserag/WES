@@ -66,16 +66,18 @@
 
 
 #contact-view{
-    width: 24%;
+    /*border-left: 4px solid #32c8a7;*/
+    border-radius: 0;
+    padding: 0 1px;
     height: fit-content;
-}
-#contact-view .item-row:first-child{
-    cursor: default;
+    margin: 0;
 }
 #contact-view .item-row {
     cursor: pointer;
 }
-
+.item-row{
+    border-radius: unset;
+}
 #contact-view .item-row:hover{
     background-color: rgba(138, 140, 144, 0.11);
 }

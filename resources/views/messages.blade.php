@@ -52,11 +52,9 @@
             </div>
         </div>
         <div class="section" id="contact-view">
-            <div class="item-row">
+            <div class="item-row info-card">
                 Contacts
             </div>
-
-
             <div class="item-row info-card">
                 <img class="info-img info-img-disconnected" src="{{ url('/images/ariya.jpg') }}">
                 <div class="info-text">
