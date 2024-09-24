@@ -159,18 +159,23 @@ a{
 .status{
     color: #fff;
     font-family: Lato;
-    background-color: #4186ee;
     padding: 3px 12px 6px 12px;
     border-radius: 36px;
 }
 .status-r{
-    background-color: #32C8A7;
+    color: #32C8A7;
+    border: 2px solid;
+    font-weight: 600;
 }
 .status-f{
-    background-color: #eada2d;
+    color: #eada2d;
+    border: 2px solid;
+    font-weight: 600;
 }
 .status-d{
-    background-color: #d9192e;
+    color: #d9192e;
+    border: 2px solid;
+    font-weight: 600;
 }
 
 

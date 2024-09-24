@@ -36,6 +36,7 @@ class UserFactory extends Factory
             'role' => 'employ',
             'salary' => random_int(1000,5000),
             'img' => $images[rand(0,3)],
+            'phone' => $this->faker->phoneNumber,
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
         ];

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('department_id',0,1);
             $table->string('role');
             $table->text('img');
+            $table->text('phone');
             $table->float('salary',0);
             $table->string('password');
             $table->integer('rate',0,1)->nullable();
