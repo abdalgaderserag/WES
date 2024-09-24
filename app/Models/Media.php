@@ -11,4 +11,9 @@ class Media extends Model
     protected $fillable = [
         'user_id', 'sender_id', 'department_id', 'text', 'attachments'
     ];
+
+    public function sender()
+    {
+        return $this->belongsTo(User::class,'sender_id', 'id');
+    }
 }

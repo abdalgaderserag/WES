@@ -17,12 +17,12 @@ class Header extends Component
 
     public function profile()
     {
-        Redirect::to('/profile');
+        Redirect::route('profile');
     }
 
     public function setting()
     {
-        Redirect::to('/setting');
+        Redirect::route('setting');
     }
 
     public function logout()

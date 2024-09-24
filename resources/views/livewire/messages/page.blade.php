@@ -10,7 +10,7 @@
                 @if($message->sender_id == auth()->id())
                     <div class="message-block">
                         <div class="message message-sender">{{ $message->text }}</div>
-                        @if($message->attachments !== '')
+                        @if($message->attachments)
                             <div class="message">{{ $message->attachments }}</div>
                         @endif
                     </div>
@@ -18,12 +18,12 @@
                     <div class="message-block sender">
                         <div>
                             <div class="message">{{ $message->text }}</div>
-                            @if($message->attachments !== '')
-                            <div class="message">{{ $message->attachments }}</div>
-                            @endif
+                            @empty(!$message->attachments)
+                                <div class="message">{{ $message->attachments }}</div>
+                            @endempty
                         </div>
                         <div>
-                            <img src="{{ url('images/astr.png') }}" style="width: 36px;border-radius: 50%;">
+                            <img src="{{ url($message->sender->img) }}" style="width: 36px;border-radius: 50%;">
                         </div>
                     </div>
 

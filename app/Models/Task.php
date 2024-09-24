@@ -12,7 +12,6 @@ class Task extends Model
         'creator_id',
         'user_id',
         'title',
-        'submit_id',
         'deadline',
         'submit_at',
         'description',
@@ -28,10 +27,5 @@ class Task extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function submit()
-    {
-        return $this->hasOne(Media::class,'id','submit');
     }
 }

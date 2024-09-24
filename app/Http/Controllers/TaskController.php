@@ -19,6 +19,11 @@ class TaskController extends Controller
         return response($tasks);
     }
 
+    public function create($id)
+    {
+        return view('mangment.task.create')->with(['id' => $id]);
+    }
+
     /**
      * Store a newly created resource in storage.
      */

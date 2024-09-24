@@ -22,7 +22,7 @@ class TaskFactory extends Factory
             'deadline' => now()->addHours(random_int(1,8)),
             'description' => $this->faker->paragraph,
             'attachments' => '',
-            'status' => 'ongoing'
+            'status' => rand(1,2)
         ];
     }
 }

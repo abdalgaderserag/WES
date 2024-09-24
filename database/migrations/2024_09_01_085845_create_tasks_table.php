@@ -16,11 +16,11 @@ return new class extends Migration
             $table->integer('creator_id',0,1);
             $table->integer('user_id',0,1);
             $table->string('title');
-//            $table->integer('submit_id',0,1);
             $table->date('deadline');
+            $table->date('submit_at')->nullable();
             $table->text('description');
-            $table->text('attachments');
-            $table->string('status');
+            $table->text('attachments')->nullable();
+            $table->integer('status',0,1);
             $table->timestamps();
         });
     }

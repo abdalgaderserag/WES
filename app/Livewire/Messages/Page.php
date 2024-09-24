@@ -27,7 +27,9 @@ class Page extends Component
             $this->user = User::all()->where('username','=',$this->username)->first();
         }else{
             $dep = Auth::user()->department;
-            $this->messages = Media::all()->where('department_id','=',$dep->id)->sortBy('created_at');
+            $this->messages =
+                Media::all()->where('department_id','=',$dep->id)
+                ->sortBy('created_at');
             $this->user = $dep;
         }
     }
