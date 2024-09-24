@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
@@ -21,6 +22,12 @@ class TaskController extends Controller
 
     public function create($id)
     {
+        $user = User::all()->where('id', '=', $id)->first();
+        if (Auth::user()->role == 'employ'){
+            return abort(401);
+        }elseif($user->department_id !== Auth::user()->department_id){
+            return abort(401);
+        }
         return view('mangment.task.create')->with(['id' => $id]);
     }
 
@@ -33,9 +40,11 @@ class TaskController extends Controller
         return view('user.task')->with(['id'=>$id]);
     }
 
-    public function submit($id)
+    public function submit(Task $task)
     {
-        return view('mangment.task.submit')->with(['id' => $id]);
+        if ($task->user_id !== Auth::id())
+            return abort(401);
+        return view('mangment.task.submit')->with(['id' => $task->id]);
     }
 
     public function approve(Task $task)
