@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('phone');
             $table->float('salary',0);
             $table->string('password');
-            $table->integer('rate',0,1)->nullable();
+            $table->float('rate',1)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

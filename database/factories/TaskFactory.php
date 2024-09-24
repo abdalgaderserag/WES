@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Media;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -26,9 +27,15 @@ class TaskFactory extends Factory
             'status' => $status
         ];
 
-        if ($status == 3){
+        if ($status == 3 || $status == 2){
+            $media = new Media([
+                'sender_id' => rand(1,11),
+                'text' => $this->faker->paragraph
+            ]);
+            $media->save();
             $data = array_merge($data,[
-                'submit_at' => now()->addHours(random_int(1,8))
+                'submit_at' => now()->addHours(random_int(1,8)),
+                'submit_id' => $media->id,
             ]);
         }
         return $data;
