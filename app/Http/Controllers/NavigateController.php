@@ -36,4 +36,14 @@ class NavigateController extends Controller
     {
         return view('messages')->with(['username' => $username]);
     }
+
+    public function profile()
+    {
+        return view('user.profile')->with(['user' => Auth::user()]);
+    }
+
+    public function setting()
+    {
+        return view('user.setting');
+    }
 }

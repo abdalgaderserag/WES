@@ -12,8 +12,9 @@ class Task extends Model
         'creator_id',
         'user_id',
         'title',
-//        'submit_id',
+        'submit_id',
         'deadline',
+        'submit_at',
         'description',
         'attachments',
         'status'
