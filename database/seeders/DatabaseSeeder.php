@@ -37,9 +37,11 @@ class DatabaseSeeder extends Seeder
             'department_id' => 1
         ]);
 
-        Task::factory(10)->create([
-            'user_id' => 11,
-        ]);
+        for ($i = 2; $i < 12; $i++) {
+            Task::factory(10)->create([
+                'user_id' => $i,
+            ]);
+        }
 
         Department::factory()->create([
             'leader_id' => 1
@@ -62,5 +64,28 @@ class DatabaseSeeder extends Seeder
             'sender_id' => 11,
             'department_id' => 1
         ]);
+
+        $users = User::all();
+
+        foreach ($users as $user){
+
+            $tasks = $user->tasks->filter(function ($t){
+                return $t->status == 3;
+            });
+
+            $count = $tasks->count();
+
+            if ($count !== 0){
+                $on_time = $tasks->filter(function ($t){
+                    // todo: compare time here
+                    $dead = strtotime($t->deadline);
+                    $submit = strtotime($t->submit_at);
+                    return $submit <= $dead;
+                })->count();
+                $rate = ($on_time/$count) * 100;
+                $user->rate = $rate;
+                $user->save();
+            }
+        }
     }
 }

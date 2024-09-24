@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('img');
             $table->float('salary',0);
             $table->string('password');
+            $table->integer('rate',0,1)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

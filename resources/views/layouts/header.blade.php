@@ -1,6 +1,6 @@
 <div id="header">
-    <div id="logo" onclick="window.location.href='/'">
-        W.E.S.
+    <div id="logo" onclick="window.location.href = '' ">
+        <img src="{{ url('svg/logo.svg') }}">
     </div>
     <div id="info">
 

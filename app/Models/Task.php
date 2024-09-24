@@ -28,4 +28,16 @@ class Task extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getStatus()
+    {
+        $sta = $this->getAttribute('status');
+        if ($sta == 3){
+            return 'completed';
+        }elseif($sta == 2){
+            return 'in review';
+        }elseif ($sta == 1){
+            return 'waiting';
+        }
+    }
 }

@@ -9,14 +9,14 @@ use Livewire\Component;
 class Workers extends Component
 {
 
-    public $workers;
+    public $workers,$search = '';
 
     public function mount()
     {
         $dep = Auth::user()->department;
         $this->workers = $dep->users->filter(function ($u){
             return $u->id !== Auth::id();
-        });;
+        });
     }
 
     public function create($id)

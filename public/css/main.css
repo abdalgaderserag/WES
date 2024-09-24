@@ -80,9 +80,10 @@ body{
 
 .section {
     background-color: #fff;
+    width: 72%;
     border-radius: 4px;
     font-size: 1.05rem;
-    margin: 20px 3%;
+    margin: 20px 10%;
 }
 .center-text{
     justify-content: center;
@@ -111,7 +112,7 @@ body{
 }
 
 .item-row .item:first-child{
-    width: 110%;
+    width: 55%;
 }
 
 .item img{

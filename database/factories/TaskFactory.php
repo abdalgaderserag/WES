@@ -16,13 +16,21 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'creator_id' => rand(0,1),
+        $status = rand(1,3);
+        $data = [
+            'creator_id' => 1,
             'title' => $this->faker->name,
             'deadline' => now()->addHours(random_int(1,8)),
             'description' => $this->faker->paragraph,
             'attachments' => '',
-            'status' => rand(1,2)
+            'status' => $status
         ];
+
+        if ($status == 3){
+            $data = array_merge($data,[
+                'submit_at' => now()->addHours(random_int(1,8))
+            ]);
+        }
+        return $data;
     }
 }

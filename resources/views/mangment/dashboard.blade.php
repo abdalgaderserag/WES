@@ -11,7 +11,10 @@
 
 
     <br><br><br>
-    <h1 class="header-title">Tasks:</h1>
+    <h1 class="header-title">your tasks:</h1>
     <livewire:tasks.index/>
+
+    <h1 class="header-title">employ tasks:</h1>
+    <livewire:tasks.employ/>
 
 @endsection

@@ -1,6 +1,6 @@
 <div id="header">
     <div id="logo" onclick="window.location.href='/'">
-        W.E.S.
+        <img style="height: 56px;margin: 0 0 0 2%" src="{{ url('svg/logo.svg') }}">
     </div>
     <div id="info">
 
@@ -24,9 +24,9 @@
         </div>
 
 
-        <div id="notifications">
-            <img src="{{ url('/svg/notification.svg') }}" onclick="window.location.href='notifications'">
-        </div>
+{{--        <div id="notifications">--}}
+{{--            <img src="{{ url('/svg/notification.svg') }}" onclick="window.location.href='notifications'">--}}
+{{--        </div>--}}
         <div id="messages">
             <img src="{{ url('/svg/message.svg') }}" onclick="window.location.href='messages'">
         </div>

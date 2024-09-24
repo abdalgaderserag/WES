@@ -24,39 +24,17 @@ class TaskController extends Controller
         return view('mangment.task.create')->with(['id' => $id]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreTaskRequest $request)
-    {
-        $task = new Task();
-        $task->creator_id = Auth::id();
-        $task->user_id = $request->user_id;
-        $task->deadline = $request->deadline;
-        $task->desciption = $request->description;
-        $task->attachments = $request->attachments;
-        $task->save();
-        return response($task);
-    }
 
     /**
      * Display the specified resource.
      */
-    public function show(Task $task)
+    public function show($id)
     {
-        return view('user.task')->with(['task'=>$task]);
+        return view('user.task')->with(['id'=>$id]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateTaskRequest $request, Task $task)
+    public function submit(Task $task)
     {
-        $task->user_id = $request->user_id;
-        $task->deadline = $request->deadline;
-        $task->desciption = $request->description;
-        $task->attachments = $request->attachments;
-        $task->update();
         return response($task);
     }
 

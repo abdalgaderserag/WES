@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('main')
-    <div class="section" id="main">
+    <div class="section" id="main" style="width: 78%;margin: 62px 0 112px 3%">
         <div class="item-row flex">
             <div>Notifications</div>
             <div>Actions</div>
