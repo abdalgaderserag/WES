@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('creator_id',0,1);
             $table->integer('user_id',0,1);
+            $table->integer('submit_id',0,1)->nullable();
             $table->string('title');
             $table->date('deadline');
             $table->date('submit_at')->nullable();

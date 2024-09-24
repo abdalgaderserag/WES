@@ -33,9 +33,9 @@ class TaskController extends Controller
         return view('user.task')->with(['id'=>$id]);
     }
 
-    public function submit(Task $task)
+    public function submit($id)
     {
-        return response($task);
+        return view('mangment.task.submit')->with(['id' => $id]);
     }
 
     public function approve(Task $task)

@@ -11,6 +11,7 @@ class Task extends Model
     protected $fillable = [
         'creator_id',
         'user_id',
+        'submit_id',
         'title',
         'deadline',
         'submit_at',
@@ -22,6 +23,11 @@ class Task extends Model
     public function creator()
     {
         return $this->hasOne(User::class,'id','creator_id');
+    }
+
+    public function media()
+    {
+        return $this->hasOne(Media::class, 'id', 'submit_id');
     }
 
     public function user()

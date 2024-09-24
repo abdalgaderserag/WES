@@ -22,6 +22,6 @@ Route::middleware('auth')->group(function (){
 
     Route::get('/task/{id}/create', 'TaskController@create')->name('task.create');
     Route::get('/task/{id}', 'TaskController@show')->name('task.show');
-    Route::get('/task/{task}/submit', 'TaskController@submit')->name('task.submit');
+    Route::get('/task/{id}/submit', 'TaskController@submit')->name('task.submit');
 });
 });
