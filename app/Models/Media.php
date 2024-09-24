@@ -16,4 +16,13 @@ class Media extends Model
     {
         return $this->belongsTo(User::class,'sender_id', 'id');
     }
+
+    public function getAttachmentsAttribute($val)
+    {
+        return json_encode($val);
+    }
+
+    public function setAttachmentsAttribute($val){
+        return json_encode($val);
+    }
 }

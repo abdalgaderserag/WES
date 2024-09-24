@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithFileUploads;
-use mysql_xdevapi\Collection;
 
 class Page extends Component
 {
@@ -19,7 +18,7 @@ class Page extends Component
 
     //todo:fix validation (write it manually?)
 //    #[Rule('required|min:1|max:255')]
-    public $text;
+    public $content = '';
 
     public $attachment = [];
     public $attachments = [];
@@ -40,10 +39,12 @@ class Page extends Component
 
     public function send()
     {
-//        $this->validate();
+        if ($this->content == ''){
+            return;
+        }
         $media = new Media([
             'sender_id' => Auth::id(),
-            'text' => $this->text
+            'text' => $this->content
         ]);
         if (empty($username)){
             $media->department_id = Auth::user()->department_id;
@@ -55,7 +56,7 @@ class Page extends Component
             $media->attachments = $path;
         }
         $media->save();
-        $this->reset(['text','attachments']);
+        $this->reset(['content','attachments']);
         $this->messages = collect($this->messages)->add($media);
     }
 
