@@ -23,12 +23,19 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $images = [
+            'images/ariya.jpg',
+            'images/astr.png',
+            'images/avatar.jpg',
+            'images/default.jpeg',
+        ];
         return [
             'name' => fake()->name(),
             'username' => $this->faker->slug,
             'department_id' => 1,
             'role' => 'employ',
             'salary' => random_int(1000,5000),
+            'img' => $images[rand(0,3)],
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
         ];

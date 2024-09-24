@@ -6,7 +6,7 @@
 
         <div id="profile" class="flex">
             <div class="flex">
-                <img class="info-img" src="{{ url('/images/avatar.jpg') }}" onclick="showProfileMenu()">
+                <img class="info-img" src="{{ url($user->img) }}" onclick="showProfileMenu()">
                 <div class="info-text" onclick="showProfileMenu()">
                     <div class="info-name">{{ $user->name }}</div>
                     <div class="info-job" style="margin-top: -1px">{{ $user->role }}</div>

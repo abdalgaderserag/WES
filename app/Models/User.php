@@ -23,7 +23,7 @@ class User extends Authenticatable
         'department_id',
         'role',
         'salary',
-        'password',
+        'img',
     ];
 
     /**

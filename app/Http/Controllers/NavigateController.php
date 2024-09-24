@@ -15,7 +15,7 @@ class NavigateController extends Controller
 
     public function dashboard(){
         $user = Auth::user();
-        if ($user->role == "department-head")
+        if ($user->role == "supervisor")
             return view('mangment.dashboard');
         elseif ($user->role == "employ")
             return view('dashboard');

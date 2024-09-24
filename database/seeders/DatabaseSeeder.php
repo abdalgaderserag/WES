@@ -16,7 +16,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create()->each(function ($u){
+        User::factory(1)->create([
+            'username' => 'test_user2',
+            'role' => 'supervisor'
+        ])->each(function ($u){
+            Media::factory(10)->create([
+                'sender_id' => $u->id,
+                'user_id' => 11
+            ]);
+        });
+        User::factory(9)->create()->each(function ($u){
             Media::factory(10)->create([
                 'sender_id' => $u->id,
                 'user_id' => 11

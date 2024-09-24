@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->integer('department_id',0,1);
             $table->string('role');
+            $table->text('img');
             $table->float('salary',0);
             $table->string('password');
             $table->rememberToken();

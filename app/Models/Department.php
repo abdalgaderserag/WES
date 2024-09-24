@@ -17,4 +17,8 @@ class Department extends Model
     {
         return $this->hasOne(User::class,'id','leader_id');
     }
+
+    public function users(){
+        return $this->hasMany(User::class);
+    }
 }

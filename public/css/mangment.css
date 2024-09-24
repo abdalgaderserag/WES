@@ -9,12 +9,48 @@
     align-items: center;
     flex-wrap: wrap;
 }
+#workers-cards .section{
+    width: 23%;
+    min-width: 240px;
+    margin: 24px 4%;
+}
 #workers .section{
     width: 28%;
     min-width: 240px;
     margin: 24px 1%;
 }
+/*.section .item-row:first-child{*/
+/*    display: none;*/
+/*}*/
 
+#workers-cards .item-row{
+    justify-content: center;
+    flex-direction: column;
+}
 .item-row span{
     color: #1a202c;
+}
+
+.card-title{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1a202c;
+    margin: 14px 0;
+}
+
+.card-button{
+    border: unset;
+    border-radius: 60px;
+    background-color: #32c8a7;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: Lato;
+    padding: 2px 9% 4px 7.5%;
+    cursor: pointer;
+}
+
+#workers-cards .item-row img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
 }

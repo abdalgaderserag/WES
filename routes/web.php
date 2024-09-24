@@ -20,6 +20,7 @@ Route::middleware('auth')->group(function (){
     Route::get('/setting', 'NavigateController@setting')->name('setting');
 
 
+    Route::get('/task/{id}/create', 'TaskController@create')->name('task.create');
     Route::get('/task/{task}', 'TaskController@show')->name('task.show');
 });
 });
