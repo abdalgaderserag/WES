@@ -14,4 +14,9 @@
 </body>
 @livewireScripts
 <script src="{{ url('js/main.js') }}"></script>
+<script>
+    function submitButton() {
+        document.getElementById('submit-button').click();
+    }
+</script>
 </html>

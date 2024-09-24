@@ -35,12 +35,18 @@
         </div>
     </div>
 
-    <div class="section flex input-message">
-        <input placeholder="enter message here" type="text" name="message" wire:model="text">
-        <img src="{{ url('svg/link.svg') }}" onclick="document.getElementById('file-upload').click()" style="margin-right: 1.5%">
-        <input wire:click="saveFile" multiple wire:model.live="attachment" type="file" style="display: none" id="file-upload">
-        <img src="{{ url('svg/send.svg') }}" wire:click="send">
-    </div>
+    <form wire:submit="send" action="">
+        <div class="section flex input-message">
+            <input placeholder="enter message here" type="text" name="message" wire:model="text">
+{{--            @error('text')--}}
+{{--            <span class="error-text">{{ $message }}</span>--}}
+{{--            @enderror--}}
+            <img src="{{ url('svg/link.svg') }}" onclick="document.getElementById('file-upload').click()" style="margin-right: 1.5%">
+            <input wire:click="saveFile" multiple wire:model="attachment" type="file" style="display: none" id="file-upload">
+            <button id="submit-button"></button>
+            <img src="{{ url('svg/send.svg') }}" onclick="submitButton()">
+        </div>
+    </form>
     <div>
         <div  class="section" wire:loading wire:target="attachment" style="color: #32c8a7">
             uploading your file..

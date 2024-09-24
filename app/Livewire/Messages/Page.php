@@ -5,6 +5,7 @@ namespace App\Livewire\Messages;
 use App\Models\Media;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Rule;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use mysql_xdevapi\Collection;
@@ -15,6 +16,9 @@ class Page extends Component
 
     public $username, $user;
     public $messages = [];
+
+    //todo:fix validation (write it manually?)
+//    #[Rule('required|min:1|max:255')]
     public $text;
 
     public $attachment = [];
@@ -36,6 +40,7 @@ class Page extends Component
 
     public function send()
     {
+//        $this->validate();
         $media = new Media([
             'sender_id' => Auth::id(),
             'text' => $this->text

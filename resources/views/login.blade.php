@@ -9,9 +9,5 @@
 <body>
     <livewire:login />
 </body>
-<script>
-    let hei = window.innerHeight;
-    document.getElementById('main').style.height = hei + 'px';
-</script>
 </html>
 
