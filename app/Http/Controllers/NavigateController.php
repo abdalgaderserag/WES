@@ -39,7 +39,7 @@ class NavigateController extends Controller
 
     public function profile()
     {
-        return view('user.profile')->with(['user' => Auth::user()]);
+        return view('user.profile');
     }
 
     public function setting()

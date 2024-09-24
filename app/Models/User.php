@@ -22,7 +22,6 @@ class User extends Authenticatable
         'username',
         'department_id',
         'role',
-        'salary',
         'img',
         'rate',
         'phone'
