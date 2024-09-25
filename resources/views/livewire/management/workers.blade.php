@@ -21,7 +21,7 @@
                                 <div style="text-align: center; height: 58px">employ didn't complete any task yet</div>
                                 @php($rate = '0')
                             @else
-                                @php($rate = $worker->rate . '%')
+                                @php($rate =  round($worker->rate, 1) . '%')
                                 <div>on-time task completion rate :</div>
                                 <div style="margin-top: 8px;font-size: 1.4rem;color: #2d3748">{{ $rate }}</div>
                             @endempty

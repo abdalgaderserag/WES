@@ -282,3 +282,7 @@ a{
 #submit-button{
     display: none;
 }
+
+h1{
+    margin-left: 4%;
+}
