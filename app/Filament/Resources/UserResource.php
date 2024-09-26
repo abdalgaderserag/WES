@@ -32,12 +32,13 @@ class UserResource extends Resource
                     ->numeric(),
                 Forms\Components\TextInput::make('role')
                     ->required(),
+                    Forms\Components\TextInput::make('rate')
+                    ->required()
+                    ->numeric(),
                 Forms\Components\Textarea::make('phone')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('password')
-                    ->password()
-                    ->required()
+            
             ]);
     }
 
